@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-const times = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm", "6 pm"];
+const times = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm"];
 
 class Tblocks extends Component {
    state = {
@@ -11,7 +11,7 @@ class Tblocks extends Component {
 
   // display saved notes from local storage
 	componentDidMount() {
-		for (var i = 0; i < 9; i++) {
+		for (var i = 0; i < 8; i++) {
 			var displayTodo = localStorage.getItem(i);
 			if (displayTodo && this.props.id === i) {
 				this.setState({
@@ -68,7 +68,7 @@ class Tblocks extends Component {
                     aria-label="With textarea"
                     onChange={this.handleInputChange}
                 />
-                <button type="button" className="btn btn-warning" onClick={this.handleFormSubmit}>
+                <button type="button" className="btn btn-color" onClick={this.handleFormSubmit}>
                 <i className="fa fa-folder"></i>
                 </button>
             </div>
