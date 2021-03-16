@@ -1,5 +1,10 @@
 import React, { Component } from "react"; 
-import './style.css'
+
+// 
+
+var now = new Date().toLocaleTimeString();
+now = now.substring(0,2);
+console.log(now);
 
 
 const times = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm"];
@@ -8,6 +13,15 @@ class Tblocks extends Component {
    state = {
        note: '',
        id: ''
+   }
+
+   determinClass() {
+      var matchTime = this.props.id;
+      matchTime = matchTime + 9;
+
+      if (matchTime === now){
+         
+      }
    }
 
   // display saved notes from local storage
@@ -21,7 +35,7 @@ class Tblocks extends Component {
 				});
 			}
 		}
-        console.log("Look Here");
+        
 	}
 
     // save note to local storage when save button clicked

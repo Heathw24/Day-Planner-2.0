@@ -21,4 +21,4 @@ Tools used:
 5. CSS
 
 
-![Day Planner Screenshot]()
+![Day Planner Screenshot](dayplanner/public/Dayplanner-v2.png)
